@@ -1,0 +1,28 @@
+@model System.Collections.Generic.List<User>
+
+@{
+    ViewBag.Title = "Users List";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Second Name (Email)</th>
+        <th>Age</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.FirstName</td>
+            <td>@user.SecondName</td>
+            <td>@user.Age</td>
+        </tr>
+    }
+    </tbody>
+</table>

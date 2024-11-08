@@ -1,0 +1,32 @@
+@model List<asp_lab12.Models.Company>
+
+@{
+    ViewBag.Title = "Companies";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Founded Year</th>
+        <th>Industry</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var company in Model)
+    {
+        <tr>
+            <td>@company.Id</td>
+            <td>@company.Name</td>
+            <td>@company.Address</td>
+            <td>@company.FoundedYear</td>
+            <td>@company.Industry</td>
+        </tr>
+    }
+    </tbody>
+</table>
